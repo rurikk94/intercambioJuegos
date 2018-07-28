@@ -1,0 +1,154 @@
+.fondo{
+    background-image:url(fondo.jpg);
+}
+
+.menu {
+  background-color:#1286B7;
+}
+
+#de{
+    text-align: center;
+}
+
+.MenuFinal{
+    background-color:#1286B7;
+    padding: 10px;
+    margin-top: 1px;
+}
+
+.MenuFinalPrueba{
+    background-color:#1286B7;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.MenuFinalNotif{
+    background-color:#1286B7;
+    padding: 10px;
+    margin-top: 200px;
+}
+
+h1,h2,h3,h4,h5,li{
+    color: white;
+}
+
+.container{
+    margin:40px;
+}
+
+.jumbotron{
+    padding:10px;
+    background-color: lightblue;
+}
+
+.franja{
+    background-color: #0DCDE2;
+    padding:10px;
+}
+
+#imagen{
+    width: 100px;
+}
+
+#imagen1{
+    width: 150px;
+}
+
+#texto{
+    text-align: left;
+}
+
+.tamaño{
+    font-size:0px;
+    text-align: center;
+}
+
+#demoA,#demoB,#demoC,#demoD{
+    color: white;
+    font-style: oblique;
+}
+
+#botonesCP{
+    padding-left: 50px;
+}
+
+#TCP_AP{
+    color: white;
+}
+
+.panel{
+    background-color: silver;
+    border: inset 0pt;
+}
+
+.homeM{
+    padding-top: 70px;
+    padding-bottom: 115px;
+}
+
+.sub-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+#ejemplo_cant{
+    resize: none;
+}
+
+.ejemplo_preg{
+    resize: none;
+    color: black;
+}
+
+.botonesVis{
+    padding-top: 100px;
+}
+
+.submit{
+    text-align: right;
+}
+
+#div1 {
+    height: 300px;
+	width: 100%;
+	background: #f1f1f1;
+	overflow-y: scroll;
+}
+
+#div1 table {
+    width:100%;
+    background-color:lightgray;
+}
+
+.div11{
+    padding-top: 40px;
+}
+
+.modif{
+    padding-top: 40px;
+}
+
+.control-label{
+    text-align: right;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 98%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  padding-top: 5%;
+}
+
+.titulo{
+    font-size: 26px;
+}
+
+.titulo2{
+    font-size: 18px;
+}
+
+.sesion{
+    font-size: 14px;
+}

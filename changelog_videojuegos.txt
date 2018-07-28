@@ -1,0 +1,56 @@
+Changelog
+
+add table "juegos_usuarios" con columnas id, id_usuario, id_juego,id_plataforma, precio, existe [1=true] de tipos numericos.
+se elimina columna id_usuario de tabla juegos. ya que se usará los datos de juegos_usuarios.
+se agrega columna cover, art, descripcion, ano,empresa a tabla juegos.
+se agrega tabla plataforma, con columnas id, nombre_plataforma
+
+se modifico conexion.php
+se agregaron archivos
+
+menus.php
+head.php		para compartir en comun el menu head y el footer
+footer.php
+
+index.php
+detalle_juego_usuario.php			muestra los datos de un juego que está disponible para intercambio, contiene un sql para consultar algunos datos del juego
+detalle_unidad_juego.php			muestra los datos de un titulo de un juego
+busqueda_detalle_unidad_juego.php	contiene el sql de la busqueda de los juegos que están disponibles para intercambiar
+
+En Busqueda_T se agrega para poder filtrar por nombre_juego
+En buscar_juego.php se agrega link para detalle de un juego
+
+En buscar_juego.php, detalle_unidad_juego.php se agregaron filtros de categorias y plataforma
+En agregar_juego.php se modifico las categorias en radio para que busque desde la base de datos
+
+
+[2017.05.29] |Rurikk | En buscar_juego se puede filtrar por categorias. Modificados Busqueda_T y buscar_juego
+[2017.05.29] |Rurikk | En agregar_juego.php se agrega un buscador por nombre del juego.
+[2017.05.29] |Rurikk | Se agrega tabla intercambios, donde se almacenará las peticiones de intercambio y su historial
+[2017.05.29] |Rurikk | Se agrega lista de peticiones de intercambio
+
+[2017.05.30] |Rurikk | Se agrega menu Mis Juegos, donde se listan los juegos del usuario, con botones para compartir / no compartir / borrar el juego
+[2017.05.30] |Rurikk | Se crean las funciones para aceptar o rechazar un intercambio
+[2017.05.30] |Rurikk | En la DB, en intercambios, se agrega columna aceptado boolean, si es verdadero, es que la peticion se acepto.
+[2017.05.30] |Rurikk | En la DB, en intercambios, se especifica el uso de la columna leido y aceptado que son boolean. si la peticion se acepta, aceptado = 1, si se rechaza, leido=1.
+					   No puede ser ambos 1. ya que hubieramos aceptado y rechazado la peticion
+[2017.05.30] |Rurikk | En la DB, en juegos_usuarios se especifica que la columna existe, se refiere a que "el juego actualmente se está intercambiando". Si es 0, no se comparte. 1 se comparte
+[2017.05.30] |Rurikk | En la DB, en juegos_usuarios se agrega columna eliminado, que dice si el juego fue eliminado, que ya solo se elimina logicamente, no fisicamente. si es 1 fue eliminado.
+[2017.05.30] |Rurikk | Al aceptar un intercambio, se modifican los datos en intercambios, aceptado pasa a 1. en juegos_usuarios, se modifica id_usuario al id del nuevo dueño
+					   Al rechazar un intercambio, se modifican los datos en intercambios, leido pasa a 1.
+					   Al compartir un juego de un usuario, se modifican existe a 1. de esta forma aparece en la lista desplegada en intercambiar videojuego.
+					   Al no compartir un juego de un usuario, se modifican existe a 0.  de esta forma ya no aparece en la lista desplegada en intercambiar videojuego.
+					   Al borrar un juego de un usuario, se modifican eliminado a 1. de esta forma ya no aparece en la lista desplegada en mis juegos. esta accion no se puede retractarse.
+[2017.05.30] |Rurikk | Se agrega marco de cover de juegos .png
+[2017.05.30] |Rurikk | Se actualiza el agregar juegos al sistema
+[2017.05.30] |Rurikk | Se agerga un boton para abregar un juego a mis juegos en detalle_juego
+
+[2017.06.11] |Rurikk | Tabla Usuario, se agrega 6 columnas, admin [bool], url_perfil [text], url_banner [text],bio[text],ciudad[text],monedero [integer]
+					   Se agrega Tabla, transacciones, con columnas id, id_user,dinero,descripcion
+[2017.06.11] |Rurikk | Se habilita opcion Salir en el menu
+					   Se agrega que se muestre foto de perfil en el menu, se agrega Mi saldo, el saldo disponible, boton recargar saldo, mi perfil.
+					   Se agrega Modificar Usuario
+					   Se modifica columna contrasena en usuario, nuevo largo de 255 para tener mayor seguridad
+
+Futuros Cambios
+-cerrar sesion
